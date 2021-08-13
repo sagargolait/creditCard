@@ -33,9 +33,12 @@ const MainPage = () => {
     cardCvv: useRef(),
   };
 
-  let focusFormFieldByKey = useCallback((key) => {
-    formFieldsRefObj[key].current.focus();
-  }, []);
+  let focusFormFieldByKey = useCallback(
+    (key) => {
+      formFieldsRefObj[key].current.focus();
+    },
+    [formFieldsRefObj]
+  );
 
   // This are the references for the Card DIV elements.
   let cardElementsRef = {
